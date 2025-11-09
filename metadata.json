@@ -1,0 +1,5 @@
+{
+  "name": "Dynamic Quiz Challenge",
+  "description": "A modern, web-based quiz application that leverages the Google Gemini API to generate a custom quiz on any topic. Features include difficulty levels, timed questions, dynamic scoring, and a persistent leaderboard.",
+  "requestFramePermissions": []
+}

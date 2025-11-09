@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Quiz Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              shake: {
+                '0%, 100%': { transform: 'translateX(0)' },
+                '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-10px)' },
+                '20%, 40%, 60%, 80%': { transform: 'translateX(10px)' },
+              },
+              pulse: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.05)' },
+              },
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              shake: 'shake 0.6s cubic-bezier(.36,.07,.19,.97) both',
+              pulse: 'pulse 1.5s infinite cubic-bezier(0.4, 0, 0.6, 1)',
+              fadeIn: 'fadeIn 0.5s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+<style>
+  body {
+    background-color: #0f172a; /* slate-900 as fallback */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+</style>
+</head>
+  <body class="text-slate-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
